@@ -104,16 +104,12 @@ class DropdownTreeSelect extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.initNewProps(this.props)
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.handleOutsideClick, false)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.initNewProps(nextProps)
   }
 
   handleClick = (e, callback) => {
